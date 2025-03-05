@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const employeeContainer = document.getElementById("employeeContainer");
 }); // does this even do anything LOL
 
+
 // Task 2: Adding Employee Cards Dynamically
 function addEmployeeCard(name, position) { // Writing a function that uses createElement to build an employee card
     
@@ -33,3 +34,13 @@ function addEmployeeCard(name, position) { // Writing a function that uses creat
 // Example Employees
 addEmployeeCard("Bethany Mejia", "Graphic Designer");
 addEmployeeCard("Deana Jefferson", "Software Developer");
+
+// Task 3: Converting NodeLists to Arrays for Bulk Updates
+function highlightAllEmployees () {
+    const nodeList = document.querySelectorAll(".employee-card"); // Using document.querySelectorAll to select all elements with the employee card class
+    const employeeCards = Array.from(nodeList); // Convert the NodeList into an array using Array.from or the spread operator
+    employeeCards.forEach(card => { // Use an array method (e.g., .forEach()) to update each card’s style or add a highlighting class
+        card.classList.add("highlight");
+    });
+}
+highlightAllEmployees(); // All employee cards will update their appearance
