@@ -1,9 +1,3 @@
-// Task 1: Creating the Base Structure
-document.addEventListener("DOMContentLoaded", () => {
-    const employeeContainer = document.getElementById("employeeContainer");
-}); // does this even do anything LOL
-
-
 // Task 2: Adding Employee Cards Dynamically
 function addEmployeeCard(name, position) { // Writing a function that uses createElement to build an employee card
     
@@ -44,3 +38,6 @@ function highlightAllEmployees () {
     });
 }
 highlightAllEmployees(); // All employee cards will update their appearance
+
+
+// Task 4: Implementing Removal of Employee Cards with Event Bubbling
