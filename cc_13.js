@@ -1,6 +1,8 @@
 // Task 2: Adding Employee Cards Dynamically
 function addEmployeeCard(name, position) { // Writing a function that uses createElement to build an employee card
     
+    const container = document.getElementById("employeeContainer"); // Gets the employee container
+
     const card = document.createElement("div"); // Creating the employee card container
     card.setAttribute("class", "employee-card"); //Set attributes using setAttribute as needed
 
@@ -14,8 +16,11 @@ function addEmployeeCard(name, position) { // Writing a function that uses creat
     removeButton.textContent = "Remove"; // Set button text
     removeButton.setAttribute("class", "remove-btn");
 
-    removeButton.onclick = function () { //Function to remove the card when the button is clicked
-        document.getElementById("employeeContainer").removeChild(card);
+    removeButton.onclick = function (event) { //Function to remove the card when the button is clicked
+      // Task 4
+        event.stopPropagation() // Using stopPropagation() in the "Remove" button’s event handler to prevent the event from bubbling up to the container
+        container.removeChild(card); // "Remove" button that removes its parent employee card using removeChild
+    
     };  
     // Appending the card elements
     card.appendChild(nameHeading); // adds name to card
@@ -41,3 +46,6 @@ highlightAllEmployees(); // All employee cards will update their appearance
 
 
 // Task 4: Implementing Removal of Employee Cards with Event Bubbling
+document.getElementbyID("employeeContainer").addEventListener("click", function () { // Attach a click event listener to the "employeeContainer"
+    console.log("Card Clicked"); // Logs a message when any card is clicked.
+})
