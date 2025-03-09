@@ -1,3 +1,5 @@
+// Task 1: Creating the Base Structure (in cc_13.html)
+
 // Task 2: Adding Employee Cards Dynamically
 function addEmployeeCard(name, position) { // Writing a function that uses createElement to build an employee card
     const container = document.getElementById("employeeContainer"); // Gets the employee container
