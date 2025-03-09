@@ -44,7 +44,7 @@ function addEmployeeCard(name, position) { // Writing a function that uses creat
 
     document.getElementById("employeeContainer").appendChild(card); // Appends the employee card to the "employeeContainer" 
 }
-// Task 5:  Inline Editing of Employee Details
+// Task 5: Inline Editing of Employee Details
 function enableEditing(card, employeeName, employeePosition, editButton) {
     
     const nameInput = document.createElement("input"); // Pre-populate the input fields with the existing employee name
@@ -99,3 +99,4 @@ document.getElementById("employeeContainer").addEventListener("click", function 
     });
 
 
+// Check to make sure if code meets all requirements --> see if an undo button is needed to get employees back without refreshing... 
